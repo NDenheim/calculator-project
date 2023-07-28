@@ -1,0 +1,28 @@
+// body {
+//   display: grid;
+//   grid-template-rows: 30% 70%;
+
+//   .display {
+//     grid-row: 1/2;
+//   }
+
+//   .button {
+//     grid-row: 2/3;
+//   }
+// }
+
+// body {
+//   display: grid;
+//   grid-template-rows: 40% 1fr;
+//   grid-template-columns: repeat(4, 1fr);
+
+//   .display {
+//     grid-row: 1/2;
+//     grid-column: 1/5;
+//   }
+
+//   .button {
+//     grid-row: 2/7;
+//     grid-column: 1/5;
+//   }
+// }
