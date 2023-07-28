@@ -7,28 +7,44 @@
     <title>Calculator</title>
   </head>
   <body>
-    <div class="display display__calculation">Calculation</div>
-    <div class="display display__answer">Answer</div>
-    <div class="button">
-      <button class="lightgrey lightgrey__AC">AC</button>
-      <button class="lightgrey lightgrey__+/-">+/-</button>
-      <button class="lightgrey lightgrey__percent">%</button>
-      <button class="green green__divide">/</button>
-      <button class="darkgrey darkgrey__7">7</button>
-      <button class="darkgrey darkgrey__8">8</button>
-      <button class="darkgrey darkgrey__9">9</button>
-      <button class="green green__multiply">*</button>
-      <button class="darkgrey darkgrey__4">4</button>
-      <button class="darkgrey darkgrey__5">5</button>
-      <button class="darkgrey darkgrey__6">6</button>
-      <button class="green green__subtract">-</button>
-      <button class="darkgrey darkgrey__1">1</button>
-      <button class="darkgrey darkgrey__2">2</button>
-      <button class="darkgrey darkgrey__3">3</button>
-      <button class="green green__add">+</button>
-      <button class="darkgrey darkgrey__0">0</button>
-      <button class="darkgrey darkgrey__decimal">.</button>
-      <button class="green green__equals">=</button>
+    <div class="calculator">
+      <input type="text" id="display" />
+      <input type="text" id="display__answer" />
+      <!-- <div class="display display__calculation">Calculation</div>
+      <div class="display display__answer">Answer</div> -->
+      <!-- <input type="number" class="display display__calculation" value="" />
+      <input type="number" class="display display__answer" value="" /> -->
+      <div class="buttons">
+        <button class="clear lightgrey lightgrey__AC" value="AC">AC</button>
+        <button class="negative lightgrey lightgrey__+/-" value="+/-">
+          +/-
+        </button>
+        <button class="percent lightgrey lightgrey__percent" value="%">
+          %
+        </button>
+        <button class="operator green green__divide" value="/">&divide;</button>
+
+        <button class="number darkgrey darkgrey__7" value="7">7</button>
+        <button class="number darkgrey darkgrey__8" value="8">8</button>
+        <button class="number darkgrey darkgrey__9" value="9">9</button>
+        <button class="operator green green__multiply" value="*">
+          &times;
+        </button>
+
+        <button class="number darkgrey darkgrey__4" value="4">4</button>
+        <button class="number darkgrey darkgrey__5" value="5">5</button>
+        <button class="number darkgrey darkgrey__6" value="6">6</button>
+        <button class="operator green green__subtract" value="-">-</button>
+
+        <button class="number darkgrey darkgrey__1" value="1">1</button>
+        <button class="number darkgrey darkgrey__2" value="2">2</button>
+        <button class="number darkgrey darkgrey__3" value="3">3</button>
+        <button class="operator green green__add" value="+">+</button>
+
+        <button class="number darkgrey darkgrey__0" value="0">0</button>
+        <button class="number darkgrey darkgrey__decimal" value=".">.</button>
+        <button class="equals green green__equals" value="=">=</button>
+      </div>
     </div>
 
     <script type="module" src="/src/main.ts"></script>
