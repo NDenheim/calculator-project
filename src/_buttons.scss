@@ -1,0 +1,21 @@
+button {
+  aspect-ratio: 1/1;
+  width: 40px;
+  color: white;
+  border-radius: 10px;
+}
+
+.button {
+  .lightgrey {
+    background-color: rgb(189, 189, 189);
+    color: black;
+  }
+
+  .darkgrey {
+    background-color: rgb(55, 55, 55);
+  }
+
+  .green {
+    background-color: rgb(77, 230, 179);
+  }
+}
