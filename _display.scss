@@ -31,9 +31,10 @@
   color: gray;
   pointer-events: none;
   max-height: fit-content;
+  padding: 10px;
 }
 
-#display__answer {
+#display-answer {
   height: 10vh;
   width: 100%;
   margin-bottom: 20px;
@@ -44,4 +45,5 @@
   text-align: right;
   max-height: fit-content;
   pointer-events: none;
+  padding: 10px;
 }
