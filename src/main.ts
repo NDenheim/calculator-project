@@ -107,22 +107,26 @@ import "./style.scss";
 // ------------------------------------------------
 
 const display = document.querySelector<HTMLInputElement>("#display");
+const answer = document.querySelector<HTMLInputElement>("#display-answer");
 const numberButtons = document.querySelectorAll(".number");
 const operatorButtons = document.querySelectorAll(".operator");
 const clearButton = document.querySelector(".clear");
+const percentButton = document.querySelector(".percent");
+const equalsButton = document.querySelector(".equals");
+const invertButton = document.querySelector(".invert");
 
-if (!display || !numberButtons || !clearButton) {
-  throw new Error("Issue with display or button querySelector");
+if (
+  !display ||
+  !numberButtons ||
+  !clearButton ||
+  !answer ||
+  !percentButton ||
+  !equalsButton ||
+  !invertButton ||
+  !operatorButtons
+) {
+  throw new Error("Issue with display or button querySelectors");
 }
-
-// const updateDisplay = () => {
-//   display.value += numberButtons[2].textContent;
-// };
-// let buttonValue = numberButtons.innerText;
-
-// const updateDisplay = () => {
-//   display.value += buttonValue;
-// };
 
 numberButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -132,12 +136,38 @@ numberButtons.forEach((button) => {
 
 operatorButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    display.value += button.innerHTML;
+    display.value += " " + button.value + " ";
   });
 });
 
 const clearDisplay = () => {
   display.value = " ";
+  answer.value = " ";
 };
 
 clearButton.addEventListener("click", clearDisplay);
+
+const invertSign = () => {
+  display.value = parseFloat(display.value) * -1;
+};
+
+invertButton.addEventListener("click", invertSign);
+
+const findPercentage = () => {
+  display.value /= 100;
+};
+
+percentButton.addEventListener("click", findPercentage);
+
+// let calculation = "2 + 4";
+// let result = eval(calculation);
+
+// console.log(result);
+
+const calculateAnswer = () => {
+  let finalAnswer = eval(display.value);
+  answer.value = finalAnswer;
+  //   console.log(finalAnswer);
+};
+
+equalsButton.addEventListener("click", calculateAnswer);
