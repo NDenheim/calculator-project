@@ -148,7 +148,7 @@ const clearDisplay = () => {
 clearButton.addEventListener("click", clearDisplay);
 
 const invertSign = () => {
-  display.value = parseFloat(display.value) * -1;
+  display.value = display.value * -1;
 };
 
 invertButton.addEventListener("click", invertSign);
@@ -159,15 +159,17 @@ const findPercentage = () => {
 
 percentButton.addEventListener("click", findPercentage);
 
-// let calculation = "2 + 4";
-// let result = eval(calculation);
-
-// console.log(result);
+// const calculateAnswer = () => {
+//   let finalAnswer = eval(display.value);
+//   answer.value = finalAnswer;
+//   // If operator button then clicked, switch display to most recent answer
+//   display.value = answer.value;
+// };
 
 const calculateAnswer = () => {
-  let finalAnswer = eval(display.value);
-  answer.value = finalAnswer;
-  //   console.log(finalAnswer);
+  let userInput = display.value;
+  let result = Function("return " + userInput)();
+  answer.value = result;
 };
 
 equalsButton.addEventListener("click", calculateAnswer);
