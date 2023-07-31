@@ -141,8 +141,8 @@ operatorButtons.forEach((button) => {
 });
 
 const clearDisplay = () => {
-  display.value = " ";
-  answer.value = " ";
+  display.value = "";
+  answer.value = "";
 };
 
 clearButton.addEventListener("click", clearDisplay);
@@ -170,6 +170,19 @@ const calculateAnswer = () => {
   let userInput = display.value;
   let result = Function("return " + userInput)();
   answer.value = result;
+
+  operatorButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (answer.value != "") {
+        display.value = answer.value;
+        display.value += " " + button.value + " ";
+      }
+    });
+  });
 };
 
 equalsButton.addEventListener("click", calculateAnswer);
+
+console.log(Math.sin(90));
+console.log(Math.sin(0));
+console.log(Math.sin(1));
