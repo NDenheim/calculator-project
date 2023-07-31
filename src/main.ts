@@ -182,7 +182,3 @@ const calculateAnswer = () => {
 };
 
 equalsButton.addEventListener("click", calculateAnswer);
-
-console.log(Math.sin(90));
-console.log(Math.sin(0));
-console.log(Math.sin(1));
