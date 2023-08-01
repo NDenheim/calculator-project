@@ -7,7 +7,7 @@ button {
 
 .buttons {
   margin: 0 auto;
-  max-width: 380px;
+  max-width: 400px;
   display: grid;
   grid-template-rows: repeat(5, 1fr);
   grid-template-columns: repeat(4, 1fr);
@@ -34,7 +34,8 @@ button {
 
   .other,
   .squareRoot,
-  .cubeRoot {
+  .cubeRoot,
+  .trig {
     display:none;
   }
 }
@@ -51,9 +52,8 @@ button {
     display: grid;
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(6, 1fr);
-    //   row-gap: 5vw;
-    //   column-gap: 5vw;
-    gap: 12px;
+    row-gap: 1vh;
+    column-gap: 2vw;
 
     .darkgrey {
 
@@ -69,7 +69,8 @@ button {
 
     .other,
     .squareRoot,
-    .cubeRoot {
+    .cubeRoot,
+    .trig {
       display: unset;
     }
   }
