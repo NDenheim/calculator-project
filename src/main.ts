@@ -2,15 +2,6 @@ import "./style.scss";
 
 // //Build a calculator
 
-// let numberClicked = buttons.values;
-
-// const updateDisplay = () => {
-//   //   console.log(numberClicked);
-//   //   alert("hello");
-//   //   display.valueAsNumber = numberClicked
-//   display.value = numberClicked.toString();
-// };
-
 
 // // calculationDisplay.textContent = "Start typing your calculation...";
 
@@ -31,6 +22,7 @@ const squareRootButton = document.querySelector(".squareRoot");
 const cubeRootButton = document.querySelector(".cubeRoot");
 const piButton = document.querySelector(".pi");
 const trigButtons = document.querySelectorAll(".trig");
+const ansButton = document.querySelector(".ans");
 
 if (
   !display ||
@@ -49,7 +41,8 @@ if (
   !squareRootButton || 
   !cubeRootButton || 
   !piButton ||
-  !trigButtons) {
+  !trigButtons || 
+  !ansButton) {
   throw new Error("Issue with a button querySelector");
 }
 
@@ -147,6 +140,14 @@ trigButtons.forEach((button) => {
 })
 
 
+// Ans button
+
+const usePreviousAnswer = () => {
+  display.value = answer.value
+}
+
+ansButton.addEventListener("click", usePreviousAnswer);
+
 // Equals button
 
 const calculateAnswer = () => {
@@ -154,14 +155,16 @@ const calculateAnswer = () => {
   let result = Function("return " + userInput)();
   answer.value = result;
 
-  operatorButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      if (answer.value != "") {
-        display.value = answer.value;
-        display.value += " " + button.value + " ";
-      }
-    });
-  });
+  // Uses previous answer when you click on an operator
+
+  // operatorButtons.forEach((button) => {
+  //   button.addEventListener("click", () => {
+  //     if (answer.value != "") {
+  //       display.value = answer.value;
+  //       display.value += " " + button.value + " ";
+  //     }
+  //   });
+  // });
 };
 
 equalsButton.addEventListener("click", calculateAnswer);

@@ -35,7 +35,8 @@ button {
   .other,
   .squareRoot,
   .cubeRoot,
-  .trig {
+  .trig,
+  .ans {
     display:none;
   }
 }
@@ -58,8 +59,7 @@ button {
     &__darkgrey {
 
       &--0 {
-        grid-column: 3/5;
-        aspect-ratio: unset;
+        grid-column: 3/4;
       }
     }
 
@@ -70,7 +70,8 @@ button {
     .other,
     .squareRoot,
     .cubeRoot,
-    .trig {
+    .trig,
+    .ans {
       display: unset;
     }
   }
