@@ -14,22 +14,22 @@ button {
   row-gap: 3vh;
   column-gap: 3vw;
 
-  .lightgrey {
+  &__lightgrey {
     background-color: rgb(189, 189, 189);
     color: black;
   }
 
-  .darkgrey {
+  &__green {
+    background-color: rgb(77, 230, 179);
+  }
+
+  &__darkgrey {
     background-color: rgb(55, 55, 55);
 
-    &__0 {
+    &--0 {
       grid-column: 1/3;
       aspect-ratio: unset;
     }
-  }
-
-  .green {
-    background-color: rgb(77, 230, 179);
   }
 
   .other,
@@ -55,15 +55,15 @@ button {
     row-gap: 1vh;
     column-gap: 2vw;
 
-    .darkgrey {
+    &__darkgrey {
 
-      &__0 {
+      &--0 {
         grid-column: 3/5;
         aspect-ratio: unset;
       }
     }
 
-    .darkgreen {
+    &__darkgreen {
       background-color: rgb(35, 185, 118);
     }
 
