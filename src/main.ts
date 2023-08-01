@@ -21,15 +21,16 @@ import "./style.scss";
 const display = document.querySelector<HTMLInputElement>("#display");
 const answer = document.querySelector<HTMLInputElement>("#display-answer");
 const numberButtons = document.querySelectorAll(".number");
-const operatorButtons = document.querySelectorAll(".operator");
+const operatorButtons = document.querySelectorAll<HTMLButtonElement>(".operator");
 const clearButton = document.querySelector(".clear");
 const percentButton = document.querySelector(".percent");
 const equalsButton = document.querySelector(".equals");
 const invertButton = document.querySelector(".invert");
-const otherButtons = document.querySelectorAll(".other");
+const otherButtons = document.querySelectorAll<HTMLButtonElement>(".other");
 const squareRootButton = document.querySelector(".squareRoot");
 const cubeRootButton = document.querySelector(".cubeRoot");
-const piButton = document.querySelector(".pi")
+const piButton = document.querySelector(".pi");
+const trigButtons = document.querySelectorAll(".trig");
 
 if (
   !display ||
@@ -47,7 +48,8 @@ if (
   !otherButtons || 
   !squareRootButton || 
   !cubeRootButton || 
-  !piButton) {
+  !piButton ||
+  !trigButtons) {
   throw new Error("Issue with a button querySelector");
 }
 
@@ -108,7 +110,7 @@ percentButton.addEventListener("click", findPercentage);
 
 const findSquareRoot = () => {
   let userInput = display.value;
-  let result = Function("return " + Math.sqrt(userInput))();
+  let result = Function("return " + Math.sqrt(Number(userInput)))();
   answer.value = result
 }
 
@@ -116,11 +118,34 @@ squareRootButton.addEventListener("click", findSquareRoot)
 
 const findCubeRoot = () => {
   let userInput = display.value;
-  let result = Function("return " + Math.cbrt(userInput))();
+  let result = Function("return " + Math.cbrt(Number(userInput)))();
   answer.value = result
 }
 
 cubeRootButton.addEventListener("click", findCubeRoot)
+
+// Sin, cos, tan
+
+const calculateTrigButtons = (event : any) => {
+  if (event.target.innerText =="sin") {
+    let userInput = display.value;
+    let result = Function("return " + Math.sin(Number(userInput)))();
+    answer.value = result
+  } else if (event.target.innerText =="cos") {
+    let userInput = display.value;
+    let result = Function("return " + Math.cos(Number(userInput)))();
+    answer.value = result
+  } else {
+    let userInput = display.value;
+    let result = Function("return " + Math.tan(Number(userInput)))();
+    answer.value = result
+  }
+}
+
+trigButtons.forEach((button) => {
+  button.addEventListener("click", calculateTrigButtons);
+})
+
 
 // Equals button
 
