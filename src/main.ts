@@ -143,7 +143,8 @@ trigButtons.forEach((button) => {
 // Ans button
 
 const usePreviousAnswer = () => {
-  display.value = answer.value
+  display.value = answer.value;
+  answer.value = ""
 }
 
 ansButton.addEventListener("click", usePreviousAnswer);
