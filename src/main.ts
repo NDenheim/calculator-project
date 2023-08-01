@@ -1,14 +1,5 @@
 import "./style.scss";
 
-// //Build a calculator
-
-
-// // calculationDisplay.textContent = "Start typing your calculation...";
-
-// ------------------------------------------------
-
-// Select all buttons and display
-
 const display = document.querySelector<HTMLInputElement>("#display");
 const answer = document.querySelector<HTMLInputElement>("#display-answer");
 const numberButtons = document.querySelectorAll(".number");
