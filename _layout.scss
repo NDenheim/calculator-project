@@ -28,11 +28,11 @@
 // }
 
 body {
-  margin: 20px;
+  margin: 10px;
   background-color: rgb(188, 244, 230);
   display: flex;
   justify-content: center;
-  height: fit-content;
+  height: 100vh;
 }
 
 .calculator {
@@ -42,8 +42,16 @@ body {
   //   min-height: 100vh;
   // min-height: auto;
   max-width: 400px;
+  // min-height:100%;
   background-color: rgb(251, 251, 247);
   border: 2px solid rgb(251, 251, 247);
   border-radius: 20px;
   padding: 20px;
+  margin: auto auto;
+}
+
+@media screen and (min-width: 768px) {
+  .calculator {
+    max-width: 800px;
+  }
 }
