@@ -7,39 +7,53 @@
     <title>Calculator</title>
   </head>
   <body>
-    <div class="calculator">
+    <!-- <div id="intro">
+    <h3>Welcome to my calculator!</h3>
+    <p>Please note: The trig functions and root buttons need you to type the number you wish to calculate on first then the relevant button.
+      <br>
+      e.g. Type 9, then click the square root button, then 3 will appear in the answer field.</p>
+    </div> -->
+      <div class="calculator">
       <input type="text" id="display" />
       <input type="text" id="display-answer" />
-      <!-- <div class="display display__calculation">Calculation</div>
-      <div class="display display__answer">Answer</div> -->
-      <!-- <input type="number" class="display display__calculation" value="" />
-      <input type="number" class="display display__answer" value="" /> -->
+
       <div class="buttons">
-        <button class="clear lightgrey lightgrey__AC" value="AC">AC</button>
-        <button class="invert lightgrey lightgrey__+/-" value="+/-">+/-</button>
-        <button class="percent lightgrey lightgrey__percent" value="%">
+        <button class="other buttons__darkgreen" value="&#40;">&#40;</button>
+        <button class="other buttons__darkgreen" value="&#41;"> &#41;</button>
+        <button class="clear buttons__lightgrey" value="AC">AC</button>
+        <button class="invert buttons__lightgrey" value="+/-">+/-</button>
+        <button class="percent buttons__lightgrey" value="%">
           %
         </button>
-        <button class="operator green green__divide" value="/">&divide;</button>
+        <button class="operator buttons__green" value="/">&divide;</button>
 
-        <button class="number darkgrey darkgrey__7" value="7">7</button>
-        <button class="number darkgrey darkgrey__8" value="8">8</button>
-        <button class="number darkgrey darkgrey__9" value="9">9</button>
-        <button class="operator green" value="*">&times;</button>
+        <button class="other buttons__darkgreen" value="**2">x <sup>2</sup></button>
+        <button class="other buttons__darkgreen" value="**3">x <sup>3</sup></button>
+        <button class="number buttons__darkgrey" value="7">7</button>
+        <button class="number buttons__darkgrey" value="8">8</button>
+        <button class="number buttons__darkgrey" value="9">9</button>
+        <button class="operator buttons__green" value="*">&times;</button>
 
-        <button class="number darkgrey darkgrey__4" value="4">4</button>
-        <button class="number darkgrey darkgrey__5" value="5">5</button>
-        <button class="number darkgrey darkgrey__6" value="6">6</button>
-        <button class="operator green green__subtract" value="-">-</button>
+        <button class="squareRoot buttons__darkgreen" value="&Sqrt;" >&Sqrt;</button>
+        <button class="cubeRoot buttons__darkgreen" ><sup>3</sup>&Sqrt;</button>
+        <button class="number buttons__darkgrey" value="4">4</button>
+        <button class="number buttons__darkgrey" value="5">5</button>
+        <button class="number buttons__darkgrey" value="6">6</button>
+        <button class="operator buttons__green" value="-">-</button>
 
-        <button class="number darkgrey darkgrey__1" value="1">1</button>
-        <button class="number darkgrey darkgrey__2" value="2">2</button>
-        <button class="number darkgrey darkgrey__3" value="3">3</button>
-        <button class="operator green green__add" value="+">+</button>
+        <button class="trig buttons__darkgreen" >sin</button>
+        <button class="trig buttons__darkgreen" >cos</button>
+        <button class="number buttons__darkgrey" value="1">1</button>
+        <button class="number buttons__darkgrey" value="2">2</button>
+        <button class="number buttons__darkgrey" value="3">3</button>
+        <button class="operator buttons__green" value="+">+</button>
 
-        <button class="number darkgrey darkgrey__0" value="0">0</button>
-        <button class="number darkgrey darkgrey__decimal" value=".">.</button>
-        <button class="equals green green__equals" value="=">=</button>
+        <button class="trig buttons__darkgreen" >tan</button>
+        <button class="pi other buttons__darkgreen">&Pi;</button>
+        <button class="number buttons__darkgrey buttons__darkgrey--0" value="0">0</button>
+        <button class="number buttons__darkgrey" value=".">.</button>
+        <button class="ans buttons__darkgrey">Ans</button>
+        <button class="equals buttons__green" value="=">=</button>
       </div>
     </div>
 
