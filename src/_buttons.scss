@@ -29,18 +29,12 @@ button {
 
   &__darkgrey {
     background-color: rgb(55, 55, 55);
-
-    &--0 {
-      grid-column: 1/3;
-      aspect-ratio: unset;
-    }
   }
 
   .other,
   .squareRoot,
   .cubeRoot,
-  .trig,
-  .ans {
+  .trig {
     display: none;
   }
 }
@@ -48,6 +42,21 @@ button {
 @media screen and (min-width: 480px) {
   button {
     aspect-ratio: unset;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #dark-mode {
+    display: unset;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    aspect-ratio: unset;
+    width: 180px;
+    height: 40px;
+    font-size: 18px;
+    background-color: black;
+    color: white;
   }
 }
 
@@ -80,24 +89,8 @@ button {
     .other,
     .squareRoot,
     .cubeRoot,
-    .trig,
-    .ans {
+    .trig {
       display: unset;
     }
-  }
-}
-
-@media screen and (min-width: 600px) {
-  #dark-mode {
-    display: unset;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    aspect-ratio: unset;
-    width: 180px;
-    height: 40px;
-    font-size: 18px;
-    background-color: black;
-    color: white;
   }
 }
