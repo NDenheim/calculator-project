@@ -13,49 +13,57 @@
       <br>
       e.g. Type 9, then click the square root button, then 3 will appear in the answer field.</p>
     </div> -->
-      <div class="calculator">
+    <div class="calculator">
       <input type="text" id="display" />
       <input type="text" id="display-answer" />
 
       <div class="buttons">
         <button class="other buttons__darkgreen" value="&#40;">&#40;</button>
-        <button class="other buttons__darkgreen" value="&#41;"> &#41;</button>
+        <button class="other buttons__darkgreen" value="&#41;">&#41;</button>
         <button class="clear buttons__lightgrey" value="AC">AC</button>
         <button class="invert buttons__lightgrey" value="+/-">+/-</button>
-        <button class="percent buttons__lightgrey" value="%">
-          %
-        </button>
+        <button class="percent buttons__lightgrey" value="%">%</button>
         <button class="operator buttons__green" value="/">&divide;</button>
 
-        <button class="other buttons__darkgreen" value="**2">x <sup>2</sup></button>
-        <button class="other buttons__darkgreen" value="**3">x <sup>3</sup></button>
+        <button class="other buttons__darkgreen" value="**2">
+          x <sup>2</sup>
+        </button>
+        <button class="other buttons__darkgreen" value="**3">
+          x <sup>3</sup>
+        </button>
         <button class="number buttons__darkgrey" value="7">7</button>
         <button class="number buttons__darkgrey" value="8">8</button>
         <button class="number buttons__darkgrey" value="9">9</button>
         <button class="operator buttons__green" value="*">&times;</button>
 
-        <button class="squareRoot buttons__darkgreen" value="&Sqrt;" >&Sqrt;</button>
-        <button class="cubeRoot buttons__darkgreen" ><sup>3</sup>&Sqrt;</button>
+        <button class="squareRoot buttons__darkgreen" value="&Sqrt;">
+          &Sqrt;
+        </button>
+        <button class="cubeRoot buttons__darkgreen"><sup>3</sup>&Sqrt;</button>
         <button class="number buttons__darkgrey" value="4">4</button>
         <button class="number buttons__darkgrey" value="5">5</button>
         <button class="number buttons__darkgrey" value="6">6</button>
         <button class="operator buttons__green" value="-">-</button>
 
-        <button class="trig buttons__darkgreen" >sin</button>
-        <button class="trig buttons__darkgreen" >cos</button>
+        <button class="trig buttons__darkgreen">sin</button>
+        <button class="trig buttons__darkgreen">cos</button>
         <button class="number buttons__darkgrey" value="1">1</button>
         <button class="number buttons__darkgrey" value="2">2</button>
         <button class="number buttons__darkgrey" value="3">3</button>
         <button class="operator buttons__green" value="+">+</button>
 
-        <button class="trig buttons__darkgreen" >tan</button>
+        <button class="trig buttons__darkgreen">tan</button>
         <button class="pi other buttons__darkgreen">&Pi;</button>
-        <button class="number buttons__darkgrey buttons__darkgrey--0" value="0">0</button>
+        <button class="number buttons__darkgrey buttons__darkgrey--0" value="0">
+          0
+        </button>
         <button class="number buttons__darkgrey" value=".">.</button>
         <button class="ans buttons__darkgrey">Ans</button>
         <button class="equals buttons__green" value="=">=</button>
       </div>
     </div>
+
+    <button id="dark-mode">Dark / Light Mode</button>
 
     <script type="module" src="/src/main.ts"></script>
   </body>

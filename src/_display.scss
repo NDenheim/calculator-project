@@ -2,7 +2,7 @@
   height: 13vh;
   width: 100%;
   font-size: 35px;
-  background-color: rgb(244, 241, 241);
+  background-color: rgb(237, 233, 233);
   border: none;
   border-radius: 10px 10px 0 0;
   text-align: right;
@@ -17,7 +17,7 @@
   width: 100%;
   margin-bottom: 20px;
   font-size: 45px;
-  background-color: rgb(244, 241, 241);
+  background-color: rgb(237, 233, 233);
   border: none;
   border-radius: 0 0 10px 10px;
   text-align: right;
@@ -26,8 +26,7 @@
   padding: 10px;
 }
 
-
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   #display {
     height: 10vh;
   }

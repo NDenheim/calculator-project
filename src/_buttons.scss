@@ -5,9 +5,13 @@ button {
   font-size: 35px;
 }
 
+#dark-mode {
+  display: none;
+}
+
 .buttons {
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 500px;
   display: grid;
   grid-template-rows: repeat(5, 1fr);
   grid-template-columns: repeat(4, 1fr);
@@ -37,19 +41,26 @@ button {
   .cubeRoot,
   .trig,
   .ans {
-    display:none;
+    display: none;
   }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 480px) {
+  button {
+    aspect-ratio: unset;
+  }
+}
+
+@media screen and (min-width: 768px) {
   button {
     font-size: 45px;
     padding: 10px;
+    aspect-ratio: unset;
   }
 
   .buttons {
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 1000px;
     display: grid;
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(6, 1fr);
@@ -57,7 +68,6 @@ button {
     column-gap: 2vw;
 
     &__darkgrey {
-
       &--0 {
         grid-column: 3/4;
       }
@@ -74,5 +84,20 @@ button {
     .ans {
       display: unset;
     }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #dark-mode {
+    display: unset;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    aspect-ratio: unset;
+    width: 180px;
+    height: 40px;
+    font-size: 18px;
+    background-color: black;
+    color: white;
   }
 }

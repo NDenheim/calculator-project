@@ -1,9 +1,10 @@
 import "./style.scss";
 
-const display = document.querySelector<HTMLInputElement>("#display");
+const display: any = document.querySelector<HTMLInputElement>("#display");
 const answer = document.querySelector<HTMLInputElement>("#display-answer");
-const numberButtons = document.querySelectorAll(".number");
-const operatorButtons = document.querySelectorAll<HTMLButtonElement>(".operator");
+const numberButtons: any = document.querySelectorAll(".number");
+const operatorButtons =
+  document.querySelectorAll<HTMLButtonElement>(".operator");
 const clearButton = document.querySelector(".clear");
 const percentButton = document.querySelector(".percent");
 const equalsButton = document.querySelector(".equals");
@@ -14,10 +15,9 @@ const cubeRootButton = document.querySelector(".cubeRoot");
 const piButton = document.querySelector(".pi");
 const trigButtons = document.querySelectorAll(".trig");
 const ansButton = document.querySelector(".ans");
+const darkModeButton = document.querySelector("#dark-mode");
 
-if (
-  !display ||
-  !answer) {
+if (!display || !answer) {
   throw new Error("Issue with a display querySelector");
 }
 
@@ -27,21 +27,23 @@ if (
   !percentButton ||
   !equalsButton ||
   !invertButton ||
-  !operatorButtons || 
-  !otherButtons || 
-  !squareRootButton || 
-  !cubeRootButton || 
+  !operatorButtons ||
+  !otherButtons ||
+  !squareRootButton ||
+  !cubeRootButton ||
   !piButton ||
-  !trigButtons || 
-  !ansButton) {
+  !trigButtons ||
+  !ansButton ||
+  !darkModeButton
+) {
   throw new Error("Issue with a button querySelector");
 }
 
 // Button values that are just added to the display screen
 
-numberButtons.forEach((button) => {
+numberButtons.forEach((button: any) => {
   button.addEventListener("click", () => {
-    display.value += button.innerHTML;
+    display.value += button.value;
   });
 });
 
@@ -77,8 +79,8 @@ invertButton.addEventListener("click", invertSign);
 // Pi button
 
 const usePi = () => {
-  display.value += " " + Math.PI.toFixed(4) + " "
-}
+  display.value += " " + Math.PI.toFixed(7) + " ";
+};
 
 piButton.addEventListener("click", usePi);
 
@@ -95,48 +97,53 @@ percentButton.addEventListener("click", findPercentage);
 const findSquareRoot = () => {
   let userInput = display.value;
   let result = Function("return " + Math.sqrt(Number(userInput)))();
-  answer.value = result
-}
+  answer.value = result;
+};
 
-squareRootButton.addEventListener("click", findSquareRoot)
+squareRootButton.addEventListener("click", findSquareRoot);
 
 const findCubeRoot = () => {
   let userInput = display.value;
   let result = Function("return " + Math.cbrt(Number(userInput)))();
-  answer.value = result
-}
+  answer.value = result;
+};
 
-cubeRootButton.addEventListener("click", findCubeRoot)
+cubeRootButton.addEventListener("click", findCubeRoot);
 
 // Sin, cos, tan
 
-const calculateTrigButtons = (event : any) => {
-  if (event.target.innerText =="sin") {
+const calculateTrigButtons = (event: any) => {
+  if (event.target.innerText == "sin") {
     let userInput = display.value;
-    let result = Function("return " + Math.sin(Number(userInput)))();
-    answer.value = result
-  } else if (event.target.innerText =="cos") {
+    let result = Function(
+      "return " + Math.sin((Number(userInput) * Math.PI) / 180)
+    )(); // Converts degrees to radians
+    answer.value = result;
+  } else if (event.target.innerText == "cos") {
     let userInput = display.value;
-    let result = Function("return " + Math.cos(Number(userInput)))();
-    answer.value = result
+    let result = Function(
+      "return " + Math.cos((Number(userInput) * Math.PI) / 180)
+    )();
+    answer.value = result;
   } else {
     let userInput = display.value;
-    let result = Function("return " + Math.tan(Number(userInput)))();
-    answer.value = result
+    let result = Function(
+      "return " + Math.tan((Number(userInput) * Math.PI) / 180)
+    )();
+    answer.value = result;
   }
-}
+};
 
 trigButtons.forEach((button) => {
   button.addEventListener("click", calculateTrigButtons);
-})
-
+});
 
 // Ans button
 
 const usePreviousAnswer = () => {
   display.value = answer.value;
-  answer.value = ""
-}
+  answer.value = "";
+};
 
 ansButton.addEventListener("click", usePreviousAnswer);
 
@@ -160,3 +167,9 @@ const calculateAnswer = () => {
 };
 
 equalsButton.addEventListener("click", calculateAnswer);
+
+const toggleDarkMode = () => {
+  document.body.classList.toggle("useDarkMode");
+};
+
+darkModeButton.addEventListener("click", toggleDarkMode);

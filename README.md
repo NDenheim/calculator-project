@@ -6,7 +6,7 @@ If you are viewing this on a desktop, you will be able to access a few extra fun
 
 A few things to note:
 
-1. The trig functions and root buttons need you to type the number you wish to calculate on first then the relevant button.
+1. The trig functions, root buttons and percent button need you to type the number you wish to calculate on first then the relevant button.
 
 e.g. Type 9, then click the square root button, then 3 will appear in the answer field.
 
